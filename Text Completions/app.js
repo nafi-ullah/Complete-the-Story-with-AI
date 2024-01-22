@@ -8,8 +8,12 @@ async function fetchData(){
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-
+            model: "text-davinci-003",
+            prompt: "hello, how are you today? ",
+            max_token: 7
         })
     });
+    const data = await response.json()
+    console.log(data);
 
 }
