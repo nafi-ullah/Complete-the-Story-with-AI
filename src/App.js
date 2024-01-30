@@ -31,13 +31,17 @@ function App() {
     />
       </div>
       <div class=" text-gray-800 text-[40px] text-center font-bold font-['Inter'] my-8">Complete your Story</div>
-      <div className="flex items-center  bg-zinc-100 rounded-xl">
-      
+      <div className="flex items-center ">
+      <div class="w-full flex flex-col items-center">
+
       <input 
       className="w-full h-48 px-4 text-lg bg-white border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
       type="text" 
       placeholder="Enter text here..."
     />
+      <button class="h-[50px] w-[200px] bg-zinc-100 rounded-xl m-9 text-[24px] hover:bg-sky-500 hover:text-white" >Complete</button>
+      </div>
+     
     </div>
       
 
