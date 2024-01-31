@@ -12,16 +12,16 @@ function App() {
     <div class="absolute top-48 left-[400px]  space-x-72 flex">
     
     <div class="w-[500px] h-[700px] bg-red-200 ">
-    <img src={wall} />
+    <img src={wall} alt="wallpaper"/>
        </div>
       <div class="w-[550px] h-[700px] "> 
       <div class=" text-gray-800 text-[64px] text-center font-bold font-['Inter']">Our Story</div>
       <div class="w-[527px] h-[231px] text-center text-black text-xl font-normal font-['Inter']">
       <TypeAnimation
       sequence={[
-        'Once upon a time in the whimsical town of Serenityville, there lived a peculiar character named Oliver Twizzletoes. Oliver had an extraordinary ability - whenever he wiggled his nose, and then .....',
+        'Once upon a time in the whimsical town of Serenityville, there lived some idle and bad people . whenever he wiggled his nose, and then .....',
         1000, 
-        'Once upon a time there lived a peculiar character named Oliver Twizzletoes. Oliver had an extraordinary ability - whenever he wiggled his nose, and then .....',
+        'Once upon a time in the whimsical town of Serenityville, there lived a man.  He was very honest. whenever he wiggled his nose, and then .....',
         1000, 
       ]}
       wrapper="p" // use a paragraph tag as the wrapper
@@ -34,11 +34,11 @@ function App() {
       <div className="flex items-center ">
       <div class="w-full flex flex-col items-center">
 
-      <input 
+      <textarea 
       className="w-full h-48 px-4 text-lg bg-white border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
-      type="text" 
+     
       placeholder="Enter text here..."
-    />
+    ></textarea>
       <button class="h-[50px] w-[200px] bg-zinc-100 rounded-xl m-9 text-[24px] hover:bg-sky-500 hover:text-white" >Complete</button>
       </div>
      
