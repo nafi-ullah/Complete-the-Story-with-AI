@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from "react";
 
 const OutputText = () => {
     var initiated = false;
@@ -16,7 +17,7 @@ const OutputText = () => {
 
 
         try{
-            const response = await fetch('https://api.openai.com/v1/chat/completions', options)
+            const response = await fetch('http://localhost:8000/completions', options)
             const data = await response.json()
             console.log("Frontend..........")
               console.log(data);
