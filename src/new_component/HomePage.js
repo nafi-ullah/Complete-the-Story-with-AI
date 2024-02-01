@@ -9,7 +9,7 @@ const HomePage = () => {
 
   const [showButton, setShowButton] = useState(true);
   const [showImage, setShowImage] = useState(false);
-
+  const [value, setValue] = useState(null);
   
 
   return (
@@ -26,9 +26,12 @@ const HomePage = () => {
        {showButton && <InputText 
        setShowButton = {setShowButton}
        setShowImage = {setShowImage}
+       setValue= {setValue}
        />}
       {showImage && (
-        <OutputText />
+        <OutputText 
+        value = {value}
+        />
       )}
      
     </div>

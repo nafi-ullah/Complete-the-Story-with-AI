@@ -1,7 +1,9 @@
-import React from 'react'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const OutputText = () => {
+const OutputText = (props) => {
+    const { value } = props;
+    
+    const [message, setMessage] = useState(null);
     var initiated = false;
 
     const getMessages = async () =>{
@@ -11,16 +13,18 @@ const OutputText = () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                messages: "how to use phone?",
+                messages: value,
             })
         }
 
 
         try{
-            const response = await fetch('http://localhost:8000/completions', options)
-            const data = await response.json()
-            console.log("Frontend..........")
-              console.log(data);
+            console.log(value);
+            // const response = await fetch('http://localhost:8000/completions', options)
+            // const data = await response.json()
+            // console.log("Frontend..........")
+            //   console.log(data);
+            //   setMessage(data.choices[0].message);
         }catch(error){
                 console.error(error);
         }

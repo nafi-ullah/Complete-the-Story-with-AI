@@ -2,9 +2,13 @@
 import { TypeAnimation } from 'react-type-animation';
 
 const InputText = (props) => {
-    const {  setShowImage, setShowButton } = props;
+    const {  setShowImage, setShowButton , setValue} = props;
 
     const handleButtonClick = () => {
+        const srtInput = document.getElementById('srtInput');
+        const srtText = srtInput.value;
+
+        setValue(srtText);
   
         setShowButton(false);
         setShowImage(true);
@@ -33,6 +37,7 @@ const InputText = (props) => {
     <div class="w-full flex flex-col items-center">
 
     <textarea 
+    id="srtInput"
     className="w-full h-48 px-4 text-lg bg-white border border-gray-300 rounded-lg shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
    
     placeholder="Enter text here..."
