@@ -13,7 +13,7 @@ const OutputText = (props) => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                messages: value,
+                messages: `write a short story within 300 words on following context: ${value}`,
             })
         }
 
@@ -43,7 +43,7 @@ const OutputText = (props) => {
     
 
   return (
-    <div class="w-[550px] h-[700px] p-12 text-xl font-serif leading-relaxed rounded-md border-4 border-black bg-gradient-to-b from-white to-gray-400 shadow-xl "> 
+    <div class="overflow-hidden overflow-y-scroll w-[550px] h-[700px] p-12 text-xl font-serif leading-relaxed rounded-md border-4 border-black bg-gradient-to-b from-white to-gray-400 shadow-xl "> 
 
 
         {!message && <p>Thinking about your story......</p>}

@@ -21,13 +21,13 @@ app.post('/completions', async (req, res)=>{
         body: JSON.stringify({
             model: "gpt-3.5-turbo",
             messages: [{role: "user", content: req.body.messages}],
-            max_tokens: 120,
+            max_tokens: 500,
         })
     }
+    console.log(req.body.messages);
     try{
         const response = await fetch('https://api.openai.com/v1/chat/completions', options)
         const data = await response.json()
-        console.log("Backend..........")
         res.send(data);
     }catch(error){
         console.error(error);
